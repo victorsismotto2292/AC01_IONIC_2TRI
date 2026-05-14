@@ -13,6 +13,11 @@
   <p>Ajuste o valor da temperatura média do 2º mês</p>
   <ion-range (ionChange)="mes2($event)" [ticks]="true" [snaps]="true" [min]="-5" [max]="40" labelPlacement="end" style="max-width: 500px; padding-left: 10px;" label="{{Range_m2}}⁰C" [(ngModel)]="Range_m2"></ion-range><br>
 
+  <p>Ajuste o valor da temperatura média do 3º mês</p>
+  <ion-range (ionChange)="mes3($event)" [ticks]="true" [snaps]="true" [min]="-5" [max]="40" labelPlacement="end" style="max-width: 500px; padding-left: 10px;" label="{{Range_m3}}⁰C" [(ngModel)]="Range_m3"></ion-range><br>
 
+  <p>Ajuste o valor da temperatura média do 4º mês</p>
+  <ion-range (ionChange)="mes4($event)" [ticks]="true" [snaps]="true" [min]="-5" [max]="40" labelPlacement="end" style="max-width: 500px; padding-left: 10px;" label="{{Range_m4}}⁰C" [(ngModel)]="Range_m4"></ion-range><br>
+  
   <ion-button expand="block" style="max-width: 200px;" (click)="abrirTela()">Verificar</ion-button>
 </ion-content>

@@ -15,6 +15,10 @@ export class HomePage {
   // VARIÁVEIS (TEMPERATURA MÁXIMA: 40⁰C):
   Range_m1 = -5 // TEMPERATURA MÍNIMA
   Range_m2 = -5 // TEMPERATURA MÍNIMA
+  Range_m3 = -5 // TEMPERATURA MÍNIMA
+  Range_m4 = -5 // TEMPERATURA MÍNIMA
+
+  resultado = '' // APARECER NA TELA
 
   /* 
   VALORES DOS CULTIVOS:
@@ -41,10 +45,37 @@ export class HomePage {
     this.Range_m2 = Number(event.detail.value);
   }
 
+  mes3(event: RangeCustomEvent){
+    this.Range_m3 = Number(event.detail.value);
+  }
+
+  mes4(event: RangeCustomEvent){
+    this.Range_m4 = Number(event.detail.value);
+  }
+
   abrirTela(){
     // O QUE VAI APARECER NA TELA:
-    const media = (this.Range_m1 + this.Range_m2)/2
-    this.router.navigateByUrl(`res-lista/${media}`);        
+    const media = (this.Range_m1 + this.Range_m2 + this.Range_m3 + this.Range_m4)/4;
+
+    const texto1 =     
+    '1. Couve-galega ou Couve-Kale -> -3⁰C e 20⁰C'
+
+    const desc_t1 = `O frio intenso converte o amido da planta em açúcar, tornando as folhas mais saborosas após uma geada.`
+
+    const texto2 = '2. Alho -> 0⁰C a 15⁰C'
+
+    const desc_t2 = 'Exige frio. O bulbo precisa passar por um período de baixas temperaturas para se dividir em "dentes".'
+
+    // CONDIÇÕES:
+
+    if(media <= 0){
+      this.resultado = `${texto1} | ${desc_t1}
+      ----------------------------------------------
+      ${texto2} | ${desc_t2}`;
+    }
+
+
+    this.router.navigateByUrl(`res-lista/${media.toFixed(1)}/${this.resultado}`);        
   }
 
 }

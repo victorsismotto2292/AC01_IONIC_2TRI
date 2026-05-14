@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-res-lista',
@@ -9,11 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ResListaPage implements OnInit {
   media: any;
+  resultado: any;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, public router: Router) { }
 
   ngOnInit() {
-    this.media = this.activatedRoute.snapshot.paramMap.get('media')
+    this.media = this.activatedRoute.snapshot.paramMap.get('media');
+    this.resultado = this.activatedRoute.snapshot.paramMap.get('resultado');
+  }
+
+  voltar(){
+    this.router.navigateByUrl(`http://localhost:8100/home`);
   }
 
 }

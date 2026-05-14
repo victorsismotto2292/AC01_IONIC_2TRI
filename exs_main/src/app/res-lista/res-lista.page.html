@@ -7,10 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <strong><p>Média da temperatura</p></strong>
+  <strong><p>Média da temperatura:</p></strong>
   <ion-label>{{media}}⁰C</ion-label>
 
   <ion-item-divider></ion-item-divider>
 
   <strong><p>O que pode ser cultivado:</p></strong>
+  <ion-list>
+    <ion-item>
+      <ion-label class="formatted-text">{{resultado}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item-divider></ion-item-divider>
+  <ion-button expand="block" style="max-width: 200px;" (click)="voltar()">Voltar</ion-button>
 </ion-content>

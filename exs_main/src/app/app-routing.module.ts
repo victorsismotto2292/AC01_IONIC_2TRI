@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'res-lista/:media',
+    path: 'res-lista/:media/:resultado',
     loadChildren: () => import('./res-lista/res-lista.module').then( m => m.ResListaPageModule)
   },
 ];

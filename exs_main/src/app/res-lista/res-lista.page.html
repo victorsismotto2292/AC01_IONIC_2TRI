@@ -15,9 +15,11 @@
   <strong><p>O que pode ser cultivado:</p></strong>
   <ion-list>
     <ion-item>
-      <ion-label class="formatted-text">{{resultado}}</ion-label>
+      <ion-label>{{resultado}}</ion-label>
     </ion-item>
   </ion-list>
-  <ion-item-divider></ion-item-divider>
-  <ion-button expand="block" style="max-width: 200px;" (click)="voltar()">Voltar</ion-button>
+  <ion-item-divider></ion-item-divider><br>
+  <div style="background-color: rgb(77, 141, 255); max-width: 200px; display: flex; justify-content: center; padding: 10px; border-radius: 5px;">
+    <a href="/home" style="text-decoration: none; text-transform: uppercase; color: black; font-size: small;">Voltar</a>
+  </div>
 </ion-content>

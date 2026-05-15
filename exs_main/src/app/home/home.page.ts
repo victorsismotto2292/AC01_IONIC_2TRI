@@ -57,23 +57,30 @@ export class HomePage {
     // O QUE VAI APARECER NA TELA:
     const media = (this.Range_m1 + this.Range_m2 + this.Range_m3 + this.Range_m4)/4;
 
-    const texto1 =     
-    '1. Couve-galega ou Couve-Kale -> -3⁰C e 20⁰C'
+    // USANDO UM ARRAY PARA ARMAZENAR OS VALORES DAS TEMPERATURAS:
 
-    const desc_t1 = `O frio intenso converte o amido da planta em açúcar, tornando as folhas mais saborosas após uma geada.`
+    const temperaturas: string[] = 
+    ["-3⁰C a 20⁰C", "0⁰C a 15⁰C", "5⁰C a 22⁰C", "12⁰C a 25⁰C", "15⁰C a 20⁰C", 
+    "18⁰C a 30⁰C", "22⁰C a 32⁰C", "25⁰C a 35⁰C", "25⁰C a 38⁰C", "30⁰C a 45⁰C"];
 
-    const texto2 = '2. Alho -> 0⁰C a 15⁰C'
+    const cultivos: string[] =
+    ["1. Couve-galega ou Couve-Kale", "2. Alho", "3. Maçã", "4. Trigo", "5. Alface", 
+    "6. Feijão", "7. Melancia", "8. Algodão", "9. Sorgo", "10. Tamareira (Tâmara)"];
 
-    const desc_t2 = 'Exige frio. O bulbo precisa passar por um período de baixas temperaturas para se dividir em "dentes".'
+    const infos: string[] =
+    ["O frio intenso converte o amido da planta em açúcar, tornando as folhas mais saborosas após uma geada.",
+      "Exige frio. O bulbo precisa passar por um período de baixas temperaturas para se dividir em dentes",
+      "Muitas macieiras precisam de centenas de horas de frio (abaixo de 7°C) para quebrar a dormência e produzir.",
+      "Versátil, mas prefere climas amenos para o enchimento dos grãos.",
+      "Essencial para o cultivo em climas predominantemente temperados e frios.",
+      "Clássico de clima temperado/quente; para de crescer se a temperatura cair muito.",
+      "Adora sol pleno e calor constante para concentrar açúcar no fruto.",
+      "Exige muito calor e luz para que os capulhos se abram corretamente.",
+      "O campeão da seca. Substitui o milho em regiões onde o calor é excessivo e a água é pouca.",
+      "Uma das poucas que prospera no calor extremo do deserto, desde que tenha acesso a água subterrânea."
+    ]
 
     // CONDIÇÕES:
-
-    if(media <= 0){
-      this.resultado = `${texto1} | ${desc_t1}
-      ----------------------------------------------
-      ${texto2} | ${desc_t2}`;
-    }
-
 
     this.router.navigateByUrl(`res-lista/${media.toFixed(1)}/${this.resultado}`);        
   }

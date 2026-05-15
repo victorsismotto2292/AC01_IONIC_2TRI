@@ -19,8 +19,4 @@ export class ResListaPage implements OnInit {
     this.resultado = this.activatedRoute.snapshot.paramMap.get('resultado');
   }
 
-  voltar(){
-    this.router.navigateByUrl(`http://localhost:8100/home`);
-  }
-
 }

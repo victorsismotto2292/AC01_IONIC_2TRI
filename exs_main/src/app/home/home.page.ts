@@ -65,7 +65,7 @@ export class HomePage {
     // USANDO UM ARRAY PARA ARMAZENAR OS TIPOS DE CULTIVOS:
     const cultivos: string[] =
     ["1. Couve-galega ou Couve-Kale", "2. Alho", "3. Maçã", "4. Trigo", "5. Alface", 
-    "6. Feijão", "7. Melancia", "8. Algodão", "9. Sorgo", "10. Tamareira (Tâmara)"];
+    "6. Feijão", "7. Melancia", "8. Algodão", "9. Sorgo", "10. Tamareira"];
 
     // USANDO UM ARRAY PARA ARMAZENAR AS INFORMAÇÕES DOS CULTIVOS:
     const infos: string[] =
@@ -74,7 +74,7 @@ export class HomePage {
       "Muitas macieiras precisam de centenas de horas de frio para quebrar a dormência e produzir.",
       "Versátil, mas prefere climas amenos para o enchimento dos grãos.",
       "Essencial para o cultivo em climas predominantemente temperados e frios.",
-      "Clássico de clima temperado/quente; para de crescer se a temperatura cair muito.",
+      "Clássico de clima temperado e quente, para de crescer se a temperatura cair muito.",
       "Adora sol pleno e calor constante para concentrar açúcar no fruto.",
       "Exige muito calor e luz para que os capulhos se abram corretamente.",
       "O campeão da seca. Substitui o milho em regiões onde o calor é excessivo e a água é pouca.",
@@ -186,7 +186,7 @@ export class HomePage {
       this.resultado = r_fix;
     }
     else if(media >= 15 && media < 18){
-      const res: string[] = [r0_fix, r1_fix, r2_fix, r3_fix, r4_fix];
+      const res: string[] = [r0_fix, r2_fix, r3_fix, r4_fix];
       const r_fix = res.join('\n________________\n\n');
 
       this.resultado = r_fix;
@@ -198,13 +198,13 @@ export class HomePage {
       this.resultado = r_fix;
     }
     else if(media >= 20 && media < 22){
-      const res: string[] = [r0_fix, r2_fix, r3_fix, r5_fix];
+      const res: string[] = [r2_fix, r3_fix, r5_fix];
       const r_fix = res.join('\n________________\n\n');
 
       this.resultado = r_fix;
     }
     else if(media >= 22 && media < 25){
-      const res: string[] = [r2_fix, r3_fix, r5_fix, r6_fix];
+      const res: string[] = [r3_fix, r5_fix, r6_fix];
       const r_fix = res.join('\n________________\n\n');
 
       this.resultado = r_fix;
@@ -216,7 +216,7 @@ export class HomePage {
       this.resultado = r_fix;
     }
     else if(media >= 30 && media <= 32){
-      const res: string[] = [r5_fix, r6_fix, r7_fix, r8_fix, r9_fix];
+      const res: string[] = [r6_fix, r7_fix, r8_fix, r9_fix];
       const r_fix = res.join('\n________________\n\n');
 
       this.resultado = r_fix;
